@@ -73,15 +73,16 @@ class EgeriaAssetDetails extends mixinBehaviors([EgeriaItemUtilsBehavior], Polym
                             title="Type"
                             with-row-stripes ></egeria-props-table>
 
-        <egeria-props-table items="[[ _attributes(item.origin) ]]"
-                            title="Origin"
-                            with-row-stripes ></egeria-props-table>
-
         <template is="dom-if" if="[[ _hasKeys(item.additionalProperties) ]]">
           <egeria-props-table items="[[ _attributes(item.additionalProperties) ]]"
                               title="Additional Properties"
                               with-row-stripes></egeria-props-table>
         </template>
+
+        <egeria-props-table items="[[ _attributes(item.origin) ]]"
+                            title="Origin"
+                            with-row-stripes
+                            collapsable></egeria-props-table>
 
         <!-- attributes -->
         <egeria-props-table items="[[ _attributes(item) ]]"

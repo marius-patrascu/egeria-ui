@@ -316,14 +316,6 @@ class EgeriaAssetSearch extends PolymerElement {
             </a>
           </template>
         </vaadin-grid-column>
-
-        <vaadin-grid-column width="15%" resizable>
-          <template class="header">
-            <div><vaadin-grid-sorter path="origin.metadataCollectionName">Origin</vaadin-grid-sorter></div>
-            <div><vaadin-grid-filter path="origin.metadataCollectionName"></vaadin-grid-filter></div>
-          </template>
-          <template>[[ item.origin.metadataCollectionName ]]</template>
-        </vaadin-grid-column>
         
         <vaadin-grid-column width="10%" resizable>
           <template class="header">
@@ -333,6 +325,14 @@ class EgeriaAssetSearch extends PolymerElement {
           <template>[[ item.type.name ]]</template>
         </vaadin-grid-column>
 
+        <vaadin-grid-column width="15%" resizable>
+          <template class="header">
+            <div><vaadin-grid-sorter path="origin.metadataCollectionName">Origin</vaadin-grid-sorter></div>
+            <div><vaadin-grid-filter path="origin.metadataCollectionName"></vaadin-grid-filter></div>
+          </template>
+          <template>[[ item.origin.metadataCollectionName ]]</template>
+        </vaadin-grid-column>
+        
         <vaadin-grid-column path="properties.qualifiedName"
                             header="Context Info"
                             width="40%"
